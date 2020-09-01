@@ -1,0 +1,138 @@
+body {
+  font-family: sans-serif;
+  background-color: #eeeeee;
+}
+
+.upload-icon {
+    width:20%;
+	margin: 25px 2px;
+}
+
+#file-name {
+    margin : 20px;
+    width:80%;
+}
+
+.file-upload {
+  border-radius: 4px;
+  border: 2px solid grey;
+  border-radius:10px;
+  box-shadow: 10px 10px 5px grey;
+  background-color: #ffffff;
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.-up-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #1FB264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824B;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.file-upload-btn:hover {
+  background: #1AA059;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  border-radius: 4px;
+  border: 4px dashed #ff00ff;
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+  border-radius:10px;
+  border: 3px dashed #1FB264;
+  position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+ /* background-color: #1FB264;
+  */border: 3px dashed red;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #15824B;
+  padding: 60px 0;
+}
+
+.file-upload-image {
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  width: 300px;
+  margin: auto;
+  color: #000;
+
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #b02818;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.remove-image:hover {
+  color: #000;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.click-button{
+    text-align:center;
+    margin:40px;
+}
+
+/*background: linear-gradient(to top right, darkmagenta 0%, hotpink 100%);/
