@@ -30,7 +30,8 @@
               <div class="file-upload">
 
                 <div class="image-upload-wrap">
-                    <input class="file-upload-input" multiple type=file name=file onchange="readURL(this);" accept="image/*" />
+                    <input class="file-upload-input" multiple="true" autocomplete="off" type=file name="files[]" onchange="readURL(this);" required/>
+
                     <div class="drag-text">
                         <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
                     </div>
@@ -44,7 +45,7 @@
               </div>
 <!--              <input type=file name=file>-->
               <div class = "click-button">
-                <input class="btn btn-primary btn-lg" type="submit" value=Upload onclick="uploadImage()"/>
+                <input class="btn btn-primary btn-lg" name = "submit" type="submit" value=Upload onclick="uploadImage()"/>
                 |
                 <button class="btn btn-primary btn-lg" onclick="removeUpload()">
                       Clear
@@ -54,18 +55,19 @@
           </form>
         </div>
         <br>
-        <div>
-            <div class="form-group mb-5">
-                <h3 class="mx-5 my-3">Your Image Url Link: </h3>
-                <input type="text" disabled name="imgUrl" class="form-control w-75 mx-auto my-3" value="{{ img_url }}">
-
-            </div>
-            <div class="text-center mt-5">
-                 <img src="{{ img_url }}" alt="">
-            </div>
-
-        </div>
-
+        {% if urllist %}
+            <h3 class="mx-5 mt-3">Your Image's Url Links: </h3>
+	        {% for url in urllist %}
+                <div>
+                    <div class="form-group my-5">
+                        <input type="text" disabled name="imgUrl" class="form-control w-75 mx-auto my-3" value="{{ url }}">
+                    </div>
+                    <div class="text-center my-5">
+                         <img src="{{ url }}" alt="">
+                    </div>
+                </div>
+	        {% endfor %}
+        {% endif %}
 
 
     </div>
